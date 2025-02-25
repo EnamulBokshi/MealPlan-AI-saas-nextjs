@@ -1,5 +1,5 @@
-# meal-plan-ai-saas-nextjs
-This is an AI based meal plan SaaS project with nextjs, tailwindcss and may more...
+# MealPlan-AI-saas-nextjs
+This is an AI driven meal planner SaaS project with nextjs, TypeScripts, Cleark Authenticator,tailwindcss and may more...
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
