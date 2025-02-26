@@ -1,7 +1,8 @@
 "use client"
 import Image from "next/image"
-import {SignedIn,SignedOut,useUser} from "@clerk/nextjs"
+import {SignedIn,SignedOut,useUser,SignOutButton} from "@clerk/nextjs"
 import { Button } from "../ui/button"
+import { Link } from "lucide-react"
 function PrimaryNav() {
   const {isLoaded, isSignedIn,user } = useUser()
   if(!isLoaded) return <p>Loading...</p>
@@ -23,11 +24,13 @@ function PrimaryNav() {
                   user?.imageUrl ? <Image src={user.imageUrl} alt={user?.fullName || "profile avtar"} width={40} height={40} className='rounded-full' /> : <a href='#' className='text-gray-600 hover:text-gray-800'>Profile</a>
                   
                 }
-                <Button variant='destructive' >Sign Out</Button>
+                
+                {/* <Button variant='destructive' ></Button> */}
+                <SignOutButton>Sign Out</SignOutButton>
                 </div>
             </SignedIn>
             <SignedOut>
-                <a href='/sign-in/' className='text-gray-600 hover:text-gray-800'>Sign In</a>
+                <a href='/sign-up' className='text-gray-600 hover:text-gray-800'>Sign In</a>
                 <a href=""></a>
             </SignedOut>
         </div>

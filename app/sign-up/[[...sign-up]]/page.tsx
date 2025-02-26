@@ -2,7 +2,7 @@ import React from 'react'
 import { SignUp } from '@clerk/nextjs'
 function SignUpComponent() {
   return (
-    <div>
+    <div className='flex justify-center items-center h-screen'>
         <SignUp />
     </div>
   )
