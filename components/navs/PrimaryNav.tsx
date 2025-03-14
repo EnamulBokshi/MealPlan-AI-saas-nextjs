@@ -2,7 +2,8 @@
 import Image from "next/image"
 import {SignedIn,SignedOut,useUser,SignOutButton} from "@clerk/nextjs"
 import { Button } from "../ui/button"
-import { Link } from "lucide-react"
+import Link from "next/link"
+
 function PrimaryNav() {
   const {isLoaded, isSignedIn,user } = useUser()
   if(!isLoaded) return <p>Loading...</p>
@@ -10,12 +11,15 @@ function PrimaryNav() {
   return (
     <nav className='flex justify-between items-center py-4 px-5 bg-white shadow-md'>
         <div className=''>
-            <a href='#' className='text-2xl font-bold text-gray-800'>MyLogo</a>
+            <Link href='/' className='text-2xl font-bold text-gray-800'>MyLogo</Link>
         </div>
         <div className='flex gap-3'>
-            <a href='#' className='text-gray-600 hover:text-gray-800'>Home</a>
-            <a href='#' className='text-gray-600 hover:text-gray-800'>About</a>
-            <a href='#' className='text-gray-600 hover:text-gray-800'>Contact</a>
+            <Link href='/' className='text-gray-600 hover:text-gray-800'>Home</Link>
+            <Link href='#' className='text-gray-600 hover:text-gray-800'>About</Link>
+            <Link href='#' className='text-gray-600 hover:text-gray-800'>Contact</Link>
+            <Link href='/pricing'>
+            Pricing
+            </Link>
         </div>
         <div>
             <SignedIn >

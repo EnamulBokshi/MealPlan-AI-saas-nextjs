@@ -17,6 +17,8 @@ node_modules
 
 # next.js
 /.next/
+.next
+.next/
 /out/
 
 # production
@@ -41,3 +43,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# clerk configuration (can include secrets)
+/.clerk/
