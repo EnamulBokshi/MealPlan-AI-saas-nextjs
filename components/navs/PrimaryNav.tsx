@@ -30,7 +30,9 @@ function PrimaryNav() {
                 }
                 
                 {/* <Button variant='destructive' ></Button> */}
-                <SignOutButton>Sign Out</SignOutButton>
+                <SignOutButton>
+                  <span className="px-4 py-2 rounded-lg bg-gray-500 hover:bg-gray-600 cursor-pointer text-white">Sign Out</span>
+                </SignOutButton>
                 </div>
             </SignedIn>
             <SignedOut>
