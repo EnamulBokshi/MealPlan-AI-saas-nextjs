@@ -9,6 +9,7 @@ import {
   SignedOut,
   UserButton
 } from '@clerk/nextjs'
+import ReactQueryClientProvider from "@/components/react-query-client-provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,12 +33,14 @@ export default function RootLayout({
   return (
   <ClerkProvider>
     <html lang="en">
+      <ReactQueryClientProvider>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        >
         <PrimaryNav />
         {children}
       </body>
+      </ReactQueryClientProvider>
     </html>
 
     </ClerkProvider>

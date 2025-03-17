@@ -19,7 +19,11 @@ model Profile{
   name String
   email String
   subscriptionActive Boolean @default(false)
+  subscriptionTier String?
   stripeSubscriptionId String? @unique
-  createdAt DateTime @default(now())
+  createdAt DateTime @default(now()) 
+  
   updatedAt DateTime @updatedAt
 }
+
+

@@ -3,7 +3,7 @@ import { SignUp } from '@clerk/nextjs'
 function SignUpComponent() {
   return (
     <div className='flex justify-center items-center h-screen'>
-        <SignUp />
+        <SignUp signInFallbackRedirectUrl={'/create-profile'}/>
     </div>
   )
 }

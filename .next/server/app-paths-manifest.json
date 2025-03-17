@@ -1,1 +1,8 @@
-{}
+{
+  "/page": "app/page.js",
+  "/create-profile/page": "app/create-profile/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/create-profile/route": "app/api/create-profile/route.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/sign-up/[[...sign-up]]/page": "app/sign-up/[[...sign-up]]/page.js"
+}
